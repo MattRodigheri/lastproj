@@ -3,16 +3,22 @@ $(document).ready(function() {
   //create function stub
 
 
-$('.store-btn').on('click', function(event){
-  localStorage.setItem('hrext', "three is the best");
-});
+  $('.store-btn').on('click', function(event){
+    let titleValue = $('.input-field-title').val();
+    let contentValue = $('.input-field-body').val();
 
-$('.get-btn').on('click', function(event){
-  localStorage.getItem('hrext');
-});
+    localStorage.setItem('titleValue', titleValue);
+    localStorage.setItem('contentValue', contentValue);
+  });
 
-$('.delete-btn').on('click', function(event){
-  localStorage.removeItem('hrext');
-});
+  $('.get-btn').on('click', function(event){
+    let titleValue = localStorage.getItem('titleValue');
+    let contentValue = localStorage.getItem('contentValue');
+    $(".debug").html(`<p>${titleValue} ${contentValue}</p>`);
+  });
+
+  $('.delete-btn').on('click', function(event){
+    localStorage.removeItem('hrext');
+  });
 
 });

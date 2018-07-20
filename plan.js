@@ -22,11 +22,11 @@ MVP - A form with two fields, two buttons (one to get, one to set), able to get
 √ 3. Learn about local storage
 √ 3a. get storage value
 √ 3b. get storage value
-  3c. 
+√ 3c. delete storage value
 
-4. implement basic write to local storage storage (hard code)
+√ 4. implement basic write to local storage storage (hard code)
 
-5. implement basic read from local storage
+√ 5. implement basic read from local storage
 
 6. make read/write dynamic (attached to form events)
 6a. update data
