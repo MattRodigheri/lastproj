@@ -17,9 +17,12 @@ MVP - A form with two fields, two buttons (one to get, one to set), able to get
 
 √ 1. Create a form
 
-2. Add event listener(s)
+√ 2. Add event listener(s)
 
-3. Learn about local storage
+√ 3. Learn about local storage
+√ 3a. get storage value
+√ 3b. get storage value
+  3c. 
 
 4. implement basic write to local storage storage (hard code)
 
