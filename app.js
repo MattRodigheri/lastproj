@@ -2,7 +2,7 @@ $(document).ready(function() {
   $('.make-btn').on('click', function(event) {
     let textValue = $('.input-field-text').val().split(' ');
     let imgValue = $('.input-field-img').val();
-    textValue.splice(textValue.length/2, 0, '</br></br></br></br></br>');
+    textValue.splice(Math.ceil(textValue.length/2), 0, '</br></br></br></br></br></br>');
     textValue = textValue.join(' ');
     localStorage.setItem('textValue', textValue);
     localStorage.setItem('imgValue', imgValue);
@@ -21,7 +21,14 @@ $(document).ready(function() {
     $(".item-display").html('');
   });
 
+  // document.querySelector('.save-btn').addEventListener('click', function() {
+  //   html2canvas(document.querySelector('.item-display'), {
+  //     onrendered: function(canvas) {
+  //       return Canvas2Image.saveAsPNG(canvas);
+  //     }
+  //   });
+  // });
   $('.save-btn').on('click', function(event) {
-
-  });
+    alert('command+shift+4 to screengrab ;)');
+  })
 });
