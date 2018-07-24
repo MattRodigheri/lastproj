@@ -2,29 +2,21 @@
 <html lang = "en">
   <head>
     <title>My CrUD</title>
-    <!--
-    TODO:
-    add link to CSS
-    add link to jquery
-    add link to our app
-    -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.js"
       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
       crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
     <script src="app.js"></script>
   </head>
   <body>
-    <div>
-        <input class="input-field-title" type="text">
-        <input class="input-field-body" type="text">
-        <button class="store-btn">store data</button>
-        <button class="get-btn">get data</button>
-        <button class="delete-btn">delete data</button>
-    </div>
-    
-    <div class="debug">
+    <div class="container">
+      <input class="input-field-text" type="text" placeholder="Enter Text Here">
+      <input class="input-field-img" type="text" placeholder="Enter Image URL Here">
+      <button class="make-btn">Make Meme!</button>
+      <button class="delete-btn">Clear Inputs</button>
 
-    </div>
+      <div class="item-display"></div>
+      <button class='save-btn'>Save Image</button>
   </body>
 </html>

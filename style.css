@@ -1,0 +1,31 @@
+.container {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+}
+
+button {
+  border-radius: 4px;
+  width: 100px;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+.item-display {
+  margin: 0 auto;
+  height: 500px;
+  width: 500px;
+  text-align: center;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: impact;
+  color: white;
+  font-size: 3.5em;
+  text-shadow:
+		-3px -3px 0 black,
+		3px -3px 0 black,
+		-3px 3px 0 black,
+		3px 3px 0 black;
+  text-transform: uppercase;
+}

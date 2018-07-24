@@ -1,24 +1,27 @@
 $(document).ready(function() {
-  //attach event listener to buttons(input?)
-  //create function stub
-
-
-  $('.store-btn').on('click', function(event){
-    let titleValue = $('.input-field-title').val();
-    let contentValue = $('.input-field-body').val();
-
-    localStorage.setItem('titleValue', titleValue);
-    localStorage.setItem('contentValue', contentValue);
+  $('.make-btn').on('click', function(event) {
+    let textValue = $('.input-field-text').val().split(' ');
+    let imgValue = $('.input-field-img').val();
+    textValue.splice(textValue.length/2, 0, '</br></br></br></br></br>');
+    textValue = textValue.join(' ');
+    localStorage.setItem('textValue', textValue);
+    localStorage.setItem('imgValue', imgValue);
+    localStorage.getItem('textValue');
+    localStorage.getItem('imgValue');
+    $(".item-display").css('background-image', 'url(' + imgValue + ')');
+    $(".item-display").html(`<p>${textValue}</p>`);
   });
 
-  $('.get-btn').on('click', function(event){
-    let titleValue = localStorage.getItem('titleValue');
-    let contentValue = localStorage.getItem('contentValue');
-    $(".debug").html(`<p>${titleValue} ${contentValue}</p>`);
+  $('.delete-btn').on('click', function(event) {
+    localStorage.removeItem('textValue');
+    localStorage.removeItem('imgValue');
+    $('.input-field-text').val('');
+    $('.input-field-img').val('');
+    $(".item-display").css('background-image', '');
+    $(".item-display").html('');
   });
 
-  $('.delete-btn').on('click', function(event){
-    localStorage.removeItem('hrext');
-  });
+  $('.save-btn').on('click', function(event) {
 
+  });
 });
